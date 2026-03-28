@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: PinkGreenDaya
+// CLIENTE: Risell Salón
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = '36a2551b-d4d6-4c54-9ac0-bea1122132dc'; // ID de PinkGreenDaya
+const NEGOCIO_ID_POR_DEFECTO = 'deb93323-d84b-40de-89c1-6b989493d69c'; // ID de Risell Salón
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'PinkGreenDaya';
+    return config?.nombre || 'Risell Salón';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '56651781 ';
+    return config?.telefono || '63967554 ';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'dayanagonzalezaguado@gmail.com';
+    return config?.email || 'risellmarquezrebeca@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a PinkGreenDaya!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a Risell Salón!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'pinkgreendaya';
+    return config?.ntfy_topic || 'risellsalon';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para PinkGreenDaya');
+console.log('✅ config-negocio.js listo para Risell Salón');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);

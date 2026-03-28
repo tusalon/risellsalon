@@ -1,22 +1,22 @@
-// sw.js - Service Worker para PinkGreenDaya
+// sw.js - Service Worker para Risell Salón
 
-const CACHE_NAME = 'pinkgreendaya-v1';
+const CACHE_NAME = 'risellsalon-v1';
 const urlsToCache = [
-  '/pinkgreendaya/',
-  '/pinkgreendaya/index.html',
-  '/pinkgreendaya/admin.html',
-  '/pinkgreendaya/admin-login.html',
-  '/pinkgreendaya/setup-wizard.html',
-  '/pinkgreendaya/editar-negocio.html',
-  '/pinkgreendaya/manifest.json',
-  '/pinkgreendaya/icons/icon-72x72.png',
-  '/pinkgreendaya/icons/icon-96x96.png',
-  '/pinkgreendaya/icons/icon-128x128.png',
-  '/pinkgreendaya/icons/icon-144x144.png',
-  '/pinkgreendaya/icons/icon-152x152.png',
-  '/pinkgreendaya/icons/icon-192x192.png',
-  '/pinkgreendaya/icons/icon-384x384.png',
-  '/pinkgreendaya/icons/icon-512x512.png'
+  '/risellsalon/',
+  '/risellsalon/index.html',
+  '/risellsalon/admin.html',
+  '/risellsalon/admin-login.html',
+  '/risellsalon/setup-wizard.html',
+  '/risellsalon/editar-negocio.html',
+  '/risellsalon/manifest.json',
+  '/risellsalon/icons/icon-72x72.png',
+  '/risellsalon/icons/icon-96x96.png',
+  '/risellsalon/icons/icon-128x128.png',
+  '/risellsalon/icons/icon-144x144.png',
+  '/risellsalon/icons/icon-152x152.png',
+  '/risellsalon/icons/icon-192x192.png',
+  '/risellsalon/icons/icon-384x384.png',
+  '/risellsalon/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/pinkgreendaya/icons/icon-192x192.png');
+            return caches.match('/risellsalon/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para PinkGreenDaya');
+console.log('✅ Service Worker configurado para Risell Salón');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
